@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to "Logo", root_path, class: "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+        <li><%= button_to "Sign In", '#', method: :get,
+          class: "btn btn-default navbar-btn" %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
