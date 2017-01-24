@@ -18,6 +18,10 @@ h1 {
   margin-bottom: 30px;
 }
 
+.center-text {
+  text-align: center;
+}
+
 // miscellaneous
 
 .debug_dump {
@@ -29,10 +33,6 @@ h1 {
 }
 
 // forms
-
-// form {
-//   width: 100%;
-// }
 
 input, textarea, label, .uneditable-input {
   // width: 100%;
@@ -47,11 +47,6 @@ select {
 input {
   height: auto !important;
 }
-
-// #name, #email, #street, #place, #birthday, #password {
-//   width: 100%;
-//   margin: auto;
-// }
 
 .left {
   width: 48%;

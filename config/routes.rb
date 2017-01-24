@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#home'
-  get 'signup' => 'users#new'
-  post 'signup' => 'users#create'
-  get 'contact' => 'static_pages#contact'
-  get 'help' => 'static_pages#help'
+  root   'static_pages#home'
+  get    'admin'   => 'admin#index'
+
+  controller :sessions do
+    get    'login'   => :new
+    post   'login'   => :create
+    delete 'logout'  => :destroy
+  end
+
+  controller :users do
+    get    'signup'  => :new
+    post   'signup'  => :create
+  end
+
+  controller :static_pages do
+    get    'contact' => :contact
+    get    'help'    => :help
+  end
+
   resources :users
 
 end
