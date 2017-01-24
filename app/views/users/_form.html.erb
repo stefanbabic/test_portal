@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user, url: signup_path) do |u| %>
-      <%= render 'shared/error_messages' %>
+
+    <%= form_for @user do |u| %>
+      <%= render 'shared/error_messages', object: @user %>
 
         <div id="name">
           <span class="left">
@@ -38,9 +39,10 @@
         <div id="birthday">
           <%= u.label :birthday, 'Birthday:' %>
           <%= u.date_select :birthday, start_year: 1917,
-            end_year: Date.today.year - 18, prompt: { day: 'Select day',
-            month: 'Select month', year: 'Select year' },
-            order: [:day, :month, :year], class: "form-control" %><br />
+            end_year: Date.today.year - 18, default: { year: 1985 },
+            prompt: { day: 'Select day', month: 'Select month',
+            year: 'Select year' }, order: [:day, :month, :year],
+            class: "form-control" %><br />
         </div>
 
         <div id="password">
@@ -56,7 +58,7 @@
         </div>
 
         <div class="button">
-          <%= u.submit "Create account", class: "btn btn-primary btn-block" %>
+          <%= u.submit yield(:button_text), class: "btn btn-primary btn-block" %>
         </div>
 
     <% end %>
