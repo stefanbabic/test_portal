@@ -1,6 +1,12 @@
+<% provide(:title, "All users") %>
 <h1>List of all users:</h1>
-<% @users.each do |u| %>
 
-  <%= link_to "#{u.first_name} #{u.last_name}", u %><br />
+<%= will_paginate %>
 
-<% end %>
+<ul>
+  <% @users.each do |u| %>
+    <li><%= link_to "#{u.first_name} #{u.last_name}", u %></li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
