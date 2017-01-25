@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   controller :users do
+    get    'index'   => :index
     get    'signup'  => :new
     post   'signup'  => :create
   end

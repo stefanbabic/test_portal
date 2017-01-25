@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email])
     if user.try(:authenticate, params[:session][:password])
       log_in user
-      flash[:success] = "You are successfully logged in."
+      flash[:success] = "You have successfully logged in."
       redirect_to user
     else
       flash[:danger] = "Please log in with correct email/password combination."
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    flash[:success] = "You are successfully logged out."
+    flash[:success] = "You have successfully logged out."
     redirect_to root_url
   end
 end
