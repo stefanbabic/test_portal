@@ -6,7 +6,8 @@ User.create!(first_name: "Stefan",
              city:       "Münster",
              birthday:   "1985-01-27",
              password:              "testing123",
-             password_confirmation: "testing123")
+             password_confirmation: "testing123",
+             admin:      true)
 
 99.times do |n|
   first_name = Faker::Name.first_name

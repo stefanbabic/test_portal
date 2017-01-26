@@ -2,7 +2,9 @@
 <h1>Welcome to Test Portal</h1>
 <div class="center-text">
   <p>This is a portal for testing a web app.</p>
-  <p>If you still don't have an account you can sign up here.</p>
-  <%= button_to "Sign Up", signup_path, method: :get,
-          class: "btn btn-primary" %>
+  <% unless logged_in? %>
+    <p>If you still don't have an account you can sign up here.</p>
+    <%= button_to "Sign Up", signup_path, method: :get,
+      class: "btn btn-primary" %>
+    <% end %>
 </div>

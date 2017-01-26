@@ -4,9 +4,7 @@
 <%= will_paginate %>
 
 <ul>
-  <% @users.each do |u| %>
-    <li><%= link_to "#{u.first_name} #{u.last_name}", u %></li>
-  <% end %>
+  <%= render @users %>
 </ul>
 
 <%= will_paginate %>
