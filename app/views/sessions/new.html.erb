@@ -14,12 +14,19 @@
         <%= s.password_field :password, class: "form-control" %>
       </div>
 
+      <div>
+        <%= s.label :remember_me, class: "checkbox inline" do %>
+          <%= s.check_box :remember_me %>
+          <span>Remember me</span>
+        <% end %>
+      </div>
+
       <div class="button">
         <%= s.submit "Log In", class: "btn btn-primary btn-block" %>
       </div>
 
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p class="center-text">New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>
 </div>
