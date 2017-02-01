@@ -29,6 +29,6 @@ User.create!(first_name: "Stefan",
                birthday:   birthday,
                password:              password,
                password_confirmation: password,
-               activated:  false,
+               activated:  true,
                activated_at:          Time.zone.now)
 end

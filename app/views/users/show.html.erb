@@ -1,5 +1,9 @@
 <% provide(:title, "Your profile") %>
-<%= "Name: #{@user.first_name} #{@user.last_name}" %><br />
-<%= "Email: #{@user.email}" %><br />
-<%= "Address: #{@user.street}, #{@user.zip} #{@user.city}" %><br />
-<%= "Birthday: #{@user.birthday.strftime("%d.%m.%Y.")}" %>
+<h1>Your profile:</h1>
+<ul>
+  <li>Name: <%= @user.first_name + " " + @user.last_name %></li>
+  <li>Email: <%= @user.email %></li>
+  <li>Address: <%= @user.street + ", " + @user.zip.to_s + " " + @user.city %></li>
+  <li>Birthday: <%= @user.birthday.strftime("%d.%m.%Y.") %></li>
+  <li>Administrator: <%= @user.admin? ? "Yes" : "No" %></li>
+</ul>

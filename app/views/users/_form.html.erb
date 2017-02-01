@@ -38,10 +38,9 @@
 
         <div id="birthday">
           <%= u.label :birthday, 'Birthday:' %>
-          <%= u.date_select :birthday, start_year: 1917,
-            end_year: Date.today.year - 18, default: { year: 1985 },
-            prompt: { day: 'Select day', month: 'Select month',
-            year: 'Select year' }, order: [:day, :month, :year],
+          <%= u.date_select :birthday, start_year: Date.today.year - 18,
+            end_year: Date.today.year - 100,
+            prompt: true, order: [:day, :month, :year],
             class: "form-control" %><br />
         </div>
 
