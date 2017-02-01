@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
         flash[:success] = "You have successfully logged in."
         redirect_back_or user
       else
-        message  = "Account not activated."
+        message  = "Account not activated. "
         message += "Check your email for the activation link."
         flash[:warning] = message
         redirect_to root_url
