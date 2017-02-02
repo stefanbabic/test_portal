@@ -11,6 +11,7 @@
 
       <div>
         <%= s.label :password, 'Password:' %>
+        <%= link_to "(forgot password)", new_password_reset_path %>
         <%= s.password_field :password, class: "form-control" %>
       </div>
 
